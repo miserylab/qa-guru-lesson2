@@ -5,6 +5,7 @@ from selene import be, have
 import pytest
 
 
+
 @pytest.fixture()
 def open_google():
     browser.open('https://google.com')
@@ -26,4 +27,4 @@ def test_first(open_google, insert_selene):
 
 
 def test_negative(open_google, insert_selene):
-    browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+    browser.element('[id="search"]').should(have.text('не Selene - User-oriented Web UI browser tests in Python'))
